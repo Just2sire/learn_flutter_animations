@@ -41,11 +41,13 @@ class _AnimatedColorPaletteState extends State<AnimatedColorPalette> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (Color color in currentPalette)
-              Container(
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 2000),
                 width: 100,
                 height: 100,
                 color: color,
                 margin: const EdgeInsets.all(8),
+                curve: Curves.ease,
               ),
             ElevatedButton(
               onPressed: regeneratePalette,
