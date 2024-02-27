@@ -71,6 +71,7 @@ class _RadialProgressAnimationState extends State<RadialProgressAnimation>
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          // Pour activer l'animation
           controller.forward();
         },
         child: const Icon(Icons.start),
