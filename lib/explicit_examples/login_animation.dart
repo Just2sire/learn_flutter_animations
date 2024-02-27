@@ -25,6 +25,12 @@ class _LoginScreenAnimationState extends State<LoginScreenAnimation>
     // Logo fade animation
     logoFadeAnimation = Tween<double>(begin: 0, end: 1).animate(controller);
 
+    // logoFadeAnimation.addListener(() {
+    //   if (logoFadeAnimation.isCompleted) {
+    //     controller.repeat(reverse: true);
+    //   }
+    // });
+
     // Inputs slide animation
     slideAnimation = Tween<Offset>(
       begin: const Offset(-1, -1),
@@ -46,6 +52,12 @@ class _LoginScreenAnimationState extends State<LoginScreenAnimation>
 
     controller.forward();
     // controller.reverse();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
   }
 
   @override
